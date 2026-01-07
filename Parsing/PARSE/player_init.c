@@ -6,11 +6,11 @@
 /*   By: aiimdih <aiimdih@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 12:00:00 by aiimdih           #+#    #+#             */
-/*   Updated: 2026/01/07 12:46:03 by aiimdih          ###   ########.fr       */
+/*   Updated: 2026/01/07 15:41:43 by aiimdih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d_render.h"
+#include "../includes/cub3d_render.h"
 #include "../includes/cub3d.h"
 
 static void	set_player_position(t_game *g)

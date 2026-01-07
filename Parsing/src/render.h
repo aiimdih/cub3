@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   render.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aiimdih <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aiimdih <aiimdih@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 20:56:27 by aiimdih           #+#    #+#             */
-/*   Updated: 2026/01/06 20:56:28 by aiimdih          ###   ########.fr       */
+/*   Updated: 2026/01/07 15:41:44 by aiimdih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RENDER_H
 # define RENDER_H
 
-# include "cub3d_render.h"
+# include "../includes/cub3d_render.h"
 
 typedef struct s_render
 {

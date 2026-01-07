@@ -6,13 +6,13 @@
 /*   By: aiimdih <aiimdih@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 15:16:45 by aiimdih           #+#    #+#             */
-/*   Updated: 2026/01/07 15:32:33 by aiimdih          ###   ########.fr       */
+/*   Updated: 2026/01/07 15:42:18 by aiimdih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d_render.h"
+#include "../includes/cub3d_render.h"
 #include "../includes/cub3d.h"
-#include "../texture.h"
+#include "../src/texture.h"
 
 int	main(int argc, char **argv)
 {
@@ -28,7 +28,7 @@ int	main(int argc, char **argv)
 	if (!g.mlx)
 		return (write(2, "mlx_init failed\n", 16), 1);
 	g.win = mlx_new_window(g.mlx, SCREEN_W, SCREEN_H,
-			"Textured Cub3D - WASD+ Arrows");
+			"Cub3D");
 	g.screen.img = mlx_new_image(g.mlx, SCREEN_W, SCREEN_H);
 	g.screen.addr = mlx_get_data_addr(g.screen.img, &g.screen.bpp,
 			&g.screen.line_len, &g.screen.endian);

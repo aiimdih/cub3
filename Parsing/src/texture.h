@@ -13,7 +13,7 @@
 #ifndef TEXTURE_H
 # define TEXTURE_H
 
-# include "cub3d_render.h"
+# include "../includes/cub3d_render.h"
 # include "render.h"
 
 typedef struct s_tex

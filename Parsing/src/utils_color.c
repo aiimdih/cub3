@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   utils_color.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aiimdih <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aiimdih <aiimdih@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 20:29:21 by aiimdih           #+#    #+#             */
-/*   Updated: 2026/01/06 20:29:25 by aiimdih          ###   ########.fr       */
+/*   Updated: 2026/01/07 15:41:42 by aiimdih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** helper to convert RGB int[3] to single unsigned int color
 */
-#include "includes/cub3d.h"
+#include "../includes/cub3d.h"
 
 unsigned int	rgb_to_uint(int *rgb)
 {

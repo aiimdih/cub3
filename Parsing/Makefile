@@ -9,7 +9,7 @@ SRCS = PARSE/main.c \
        PARSE/core_parse.c \
        PARSE/map_config.c \
        PARSE/parse_validators.c \
-       utils_color.c \
+       src/utils_color.c \
        PARSE/player_init.c \
        PARSE/parse_walls.c \
        PARSE/parser_utils.c \
@@ -17,7 +17,7 @@ SRCS = PARSE/main.c \
        PARSE/validators_help.c \
        get_next_line/get_next_line.c \
        get_next_line/get_next_line_utils.c \
-       render.c dda.c utils_tex.c texture.c player_move.c player_movement.c
+       src/render.c src/dda.c src/utils_tex.c src/texture.c src/player_move.c src/player_movement.c
 
 OBJS = $(SRCS:.c=.o)
 

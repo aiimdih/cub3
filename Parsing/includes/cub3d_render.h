@@ -6,14 +6,14 @@
 /*   By: aiimdih <aiimdih@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 20:48:37 by aiimdih           #+#    #+#             */
-/*   Updated: 2026/01/07 15:32:32 by aiimdih          ###   ########.fr       */
+/*   Updated: 2026/01/07 15:41:42 by aiimdih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_RENDER_H
 # define CUB3D_RENDER_H
 
-# include "./includes/cub3d.h"
+# include "cub3d.h"
 # include <math.h>
 # include <mlx.h>
 # include <stdio.h>
