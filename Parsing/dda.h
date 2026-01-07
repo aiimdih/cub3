@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   dda.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aiimdih <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/07 12:17:53 by aiimdih           #+#    #+#             */
-/*   Updated: 2026/01/07 12:17:57 by aiimdih          ###   ########.fr       */
+/*   Created: 2026/01/06 20:56:09 by aiimdih           #+#    #+#             */
+/*   Updated: 2026/01/06 20:56:11 by aiimdih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef DDA_H
+# define DDA_H
 
-int	ft_strcmp(const char *s1, const char *s2)
-{
-	size_t	i;
+# include "render.h"
 
-	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0'
-		&& (unsigned char)s1[i] == (unsigned char)s2[i])
-	{
-		i++;
-	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-}
+void	dda_step(t_render *r);
+void	dda_loop(t_render *r, t_game *g);
+
+#endif

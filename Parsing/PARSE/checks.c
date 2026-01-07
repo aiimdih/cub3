@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checks.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aiimdih <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/07 15:19:29 by aiimdih           #+#    #+#             */
+/*   Updated: 2026/01/07 15:19:37 by aiimdih          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/cub3d.h"
 
 int	allowed_char(char c)
@@ -12,12 +24,14 @@ int	is_dir(char c)
 		return (1);
 	return (0);
 }
+
 int	is_whitespace(char c)
 {
 	if (c == ' ' || c == '\n')
 		return (1);
 	return (0);
 }
+
 int	is_valid_path_char(char c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))

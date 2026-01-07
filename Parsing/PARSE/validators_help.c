@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   validators_help.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aiimdih <aiimdih@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/07 15:10:29 by aiimdih           #+#    #+#             */
+/*   Updated: 2026/01/07 15:11:28 by aiimdih          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/cub3d.h"
 
 void	validate_map_whitespace(t_map *map, t_mlx *mlx)
@@ -60,11 +72,13 @@ int	color_syntax(char *str, char to_find)
 		return (0);
 	return (1);
 }
+
 void	set_player_pos(t_map *map, int x, int y)
 {
 	map->player_x = x;
 	map->player_y = y;
-	map->player_dir = map->map[y][x];
+	map->player_dir = ft_toupper((int)map->map[y][x]);
+	map->map[y][x] = '0';
 }
 
 void	process_player_char(int *plyr_cnt, t_mlx *mlx)

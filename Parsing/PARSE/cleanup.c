@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cleanup.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aiimdih <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/07 15:18:57 by aiimdih           #+#    #+#             */
+/*   Updated: 2026/01/07 15:19:08 by aiimdih          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/cub3d.h"
 
 void	free_map(t_map *map)
@@ -27,7 +39,6 @@ int	free_mlx(t_mlx *mlx)
 		return (0);
 	if (mlx->map)
 		free_map(mlx->map);
-	//You can free here other mlx things
 	return (0);
 }
 

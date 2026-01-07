@@ -9,19 +9,22 @@ SRCS = PARSE/main.c \
        PARSE/core_parse.c \
        PARSE/map_config.c \
        PARSE/parse_validators.c \
+       utils_color.c \
+       PARSE/player_init.c \
        PARSE/parse_walls.c \
        PARSE/parser_utils.c \
        PARSE/config_help.c \
        PARSE/validators_help.c \
        get_next_line/get_next_line.c \
-       get_next_line/get_next_line_utils.c
+       get_next_line/get_next_line_utils.c \
+       render.c dda.c utils_tex.c texture.c player_move.c player_movement.c
 
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS) libft/libft.a
-	$(CC) $(CFLAGS) $(OBJS) libft/libft.a -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) libft/libft.a -o $(NAME) -lmlx -lXext -lX11 -lm
 
 libft/libft.a:
 	make -C libft

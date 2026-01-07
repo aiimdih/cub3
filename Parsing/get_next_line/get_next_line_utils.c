@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matahir <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aiimdih <aiimdih@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:23:58 by matahir           #+#    #+#             */
-/*   Updated: 2025/01/11 17:29:15 by matahir          ###   ########.fr       */
+/*   Updated: 2026/01/07 13:13:33 by aiimdih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "get_next_line.h"
 
 char	*check(char *t)

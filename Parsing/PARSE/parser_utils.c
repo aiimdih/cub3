@@ -1,19 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parser_utils.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aiimdih <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/07 15:12:02 by aiimdih           #+#    #+#             */
+/*   Updated: 2026/01/07 15:12:04 by aiimdih          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/cub3d.h"
 
-void free_arr(char **arr)
+void	free_arr(char **arr)
 {
-    int i;
-    
-    if (!arr)
-        return;
-    
-    i = 0;
-    while (arr[i])
-    {
-        free(arr[i]);
-        i++;
-    }
-    free(arr);
+	int	i;
+
+	if (!arr)
+		return ;
+	i = 0;
+	while (arr[i])
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
 }
 
 int	is_blank(char *line)
@@ -83,5 +94,3 @@ int	side_walls(char *line)
 		return (1);
 	return (0);
 }
-
-

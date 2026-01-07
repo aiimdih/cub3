@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   core_help.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aiimdih <aiimdih@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/07 15:17:06 by aiimdih           #+#    #+#             */
+/*   Updated: 2026/01/07 15:18:03 by aiimdih          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/cub3d.h"
 
 char	**skip_config(char **lines, int *gaps)
@@ -53,31 +65,28 @@ int	has_xpm_ext(char *path)
 	return (1);
 }
 
-void ensure_walls(t_map *map, t_mlx *mlx)
+void	ensure_walls(t_map *map, t_mlx *mlx)
 {
-    int i;
-	int j;
-    
-    i = 0;
-    map->height = count_lines(map->map);
-    while (map->map[i])
-    {
-        if (side_walls(map->map[i]))
-            ft_error("Error\nIssue reading map (side walls)", mlx); 
-        j = 0;
-        while (map->map[i][j] && map->map[i][j] != '\n')
-        {
-            if ((i == 0 || i == map->height - 1) &&      
-                (map->map[i][j] != '1' && map->map[i][j] != ' ' &&              
-                 edge_closure(map->map, i, -1))) 
-                ft_error("Error\nMap is not enclosed.", mlx);
+	int	i;
+	int	j;
 
-            else if (!allowed_char(map->map[i][j]))
-                ft_error("Error\nWrong Character.", mlx);
-            
-            j++;
-        }
-        i++;
-    }
-    map->width = max_width(map->map);
+	i = 0;
+	map->height = count_lines(map->map);
+	while (map->map[i])
+	{
+		if (side_walls(map->map[i]))
+			ft_error("Error\nIssue reading map (side walls)", mlx);
+		j = 0;
+		while (map->map[i][j] && map->map[i][j] != '\n')
+		{
+			if ((i == 0 || i == map->height - 1) && (map->map[i][j] != '1'
+				&& map->map[i][j] != ' ' && edge_closure(map->map, i, -1)))
+				ft_error("Error\nMap is not enclosed.", mlx);
+			else if (!allowed_char(map->map[i][j]))
+				ft_error("Error\nWrong Character.", mlx);
+			j++;
+		}
+		i++;
+	}
+	map->width = max_width(map->map);
 }

@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_validators.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aiimdih <aiimdih@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/07 15:15:16 by aiimdih           #+#    #+#             */
+/*   Updated: 2026/01/07 15:15:28 by aiimdih          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/cub3d.h"
 
 void	validate_player(t_map *map, t_mlx *mlx)
 {
-	int		y;
-	int		x;
-	int		plyr_cnt;
+	int	y;
+	int	x;
+	int	plyr_cnt;
 
 	y = 0;
 	plyr_cnt = 0;
@@ -29,50 +41,49 @@ void	validate_player(t_map *map, t_mlx *mlx)
 		ft_error("No player found.", mlx);
 }
 
-static void get_first_token(char *line, char **start, int *len)
+static void	get_first_token(char *line, char **start, int *len)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (line[i] && is_whitespace(line[i]))
-        i++;
-    if (!line[i])
-    {
-        *start = NULL;
-        *len = 0;
-        return;
-    }
-    *start = &line[i];
-    *len = 0;
-    while (line[i] && !is_whitespace(line[i]))
-    {
-        (*len)++;
-        i++;
-    }
+	i = 0;
+	while (line[i] && is_whitespace(line[i]))
+		i++;
+	if (!line[i])
+	{
+		*start = NULL;
+		*len = 0;
+		return ;
+	}
+	*start = &line[i];
+	*len = 0;
+	while (line[i] && !is_whitespace(line[i]))
+	{
+		(*len)++;
+		i++;
+	}
 }
 
-static int count_key_occurrences(char **content, char *key)
+static int	count_key_occurrences(char **content, char *key)
 {
-    int i;
-    int count;
-    int namelen;
-    char *start;
-    int tlen;
+	int		i;
+	int		count;
+	int		namelen;
+	char	*start;
+	int		tlen;
 
-    i = 0;
-    count = 0;
-    namelen = ft_strlen(key);
-    if (namelen > 0 && key[namelen - 1] == ' ')
-        namelen--;
-    while (content[i])
-    {
-        get_first_token(content[i], &start, &tlen);
-        if (start && tlen == namelen 
-            && ft_strncmp(start, key, namelen) == 0)
-            count++;
-        i++;
-    }
-    return (count);
+	i = 0;
+	count = 0;
+	namelen = ft_strlen(key);
+	if (namelen > 0 && key[namelen - 1] == ' ')
+		namelen--;
+	while (content[i])
+	{
+		get_first_token(content[i], &start, &tlen);
+		if (start && tlen == namelen && ft_strncmp(start, key, namelen) == 0)
+			count++;
+		i++;
+	}
+	return (count);
 }
 
 static void	free_and_error(char **content, char *msg, t_mlx *mlx)
@@ -99,7 +110,7 @@ void	check_duplicate_config(char **content, t_mlx *mlx)
 /*
 static void	get_first_token(const char *line, const char **start, int *len)
 {
-	int j;
+	int	j;
 
 	j = 0;
 	while (line[j] && is_whitespace(line[j]))
@@ -108,7 +119,7 @@ static void	get_first_token(const char *line, const char **start, int *len)
 	{
 		*start = NULL;
 		*len = 0;
-		return;
+		return ;
 	}
 	*start = line + j;
 	*len = 0;
@@ -144,5 +155,3 @@ static int	count_key_occurrences(char **content, char *key)
 	}
 	return (count);
 }*/
-
-

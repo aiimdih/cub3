@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   utils_color.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aiimdih <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/07 12:17:53 by aiimdih           #+#    #+#             */
-/*   Updated: 2026/01/07 12:17:57 by aiimdih          ###   ########.fr       */
+/*   Created: 2026/01/06 20:29:21 by aiimdih           #+#    #+#             */
+/*   Updated: 2026/01/06 20:29:25 by aiimdih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*
+** helper to convert RGB int[3] to single unsigned int color
+*/
+#include "includes/cub3d.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+unsigned int	rgb_to_uint(int *rgb)
 {
-	size_t	i;
+	unsigned int	r;
+	unsigned int	g;
+	unsigned int	b;
 
-	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0'
-		&& (unsigned char)s1[i] == (unsigned char)s2[i])
-	{
-		i++;
-	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	if (!rgb)
+		return (0);
+	r = (unsigned int)rgb[0] & 0xFF;
+	g = (unsigned int)rgb[1] & 0xFF;
+	b = (unsigned int)rgb[2] & 0xFF;
+	return ((r << 16) | (g << 8) | b);
 }
